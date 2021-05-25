@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+ENTITY FourBitParSftReg IS
+
+		port(D: in std_logic_vector(0 to 3);
+				Clk: in std_logic;
+			Q: out std_logic_vector(0 to 3));
+end FourBitParSftReg;  
+
+----------------------------------------
+
+architecture comportamento of FourBitParSftReg is 
+
+	component dff is
+		port(D, Clk: in std_logic;
+				Q: out std_logic);
+	end component dff;
+
+
+begin 
+
+	DFF0: dff port map(D => D(0), Clk => Clk, Q => Q(0));
+	DFF1: dff port map(D => D(1), Clk => Clk, Q => Q(1));
+	DFF2: dff port map(D => D(2), Clk => Clk, Q => Q(2));
+	DFF3: dff port map(D => D(3), Clk => Clk, Q => Q(3));
+		
+
+end comportamento; 
+
+------------------------------------------

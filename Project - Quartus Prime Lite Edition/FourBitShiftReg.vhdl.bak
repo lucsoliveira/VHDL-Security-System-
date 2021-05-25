@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FourBitShiftReg is
+
+port (R_L, Clk: in std_logic;
+	D: in std_logic_vector(0 to 7);
+	Q: buffer std_logic
+);
+
+end entity FourBitShiftReg;
+
+
+architecture comportamento of FourBitShiftReg is
+
+	component dff is
+		PORT(D,Clk: in std_logic;
+				Q: out std_logic);
+	end component dff;
+	
+	signal D0, D1, D2, D3, D4, D5, D6, D7: std_logic;
+	signal Q0, Q1, Q2, Q3, Q4, Q5, Q6: std_logic;
+	
+
+begin
+
+	D0 <= (not R_L and D(0));
+	D1 <= (Q0 and R_L) or (not R_L and D(1));
+	D2 <= (Q1 and R_L) or (not R_L and D(2));
+	D3 <= (Q2 and R_L) or (not R_L and D(3));
+	D4 <= (Q3 and R_L) or (not R_L and D(4));
+	D5 <= (Q4 and R_L) or (not R_L and D(5));
+	D6 <= (Q5 and R_L) or (not R_L and D(6));
+	D7 <= (Q6 and R_L) or (not R_L and D(7));
+	
+DFF0: dff port map(D => D0, Clk => Clk, Q => Q0);
+DFF1: dff port map(D => D1, Clk => Clk, Q => Q1);
+DFF2: dff port map(D => D2, Clk => Clk, Q => Q2);
+DFF3: dff port map(D => D3, Clk => Clk, Q => Q3);
+DFF4: dff port map(D => D4, Clk => Clk, Q => Q4);
+DFF5: dff port map(D => D5, Clk => Clk, Q => Q5);
+DFF6: dff port map(D => D6, Clk => Clk, Q => Q6);
+DFF7: dff port map(D => D7, Clk => Clk, Q => Q);
+
+	
+end architecture comportamento;

@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity EightBitShiftReg is
+
+port ();
+
+end entity EightBitShiftReg;
+
+architecture comportamento of OneShot is
+
+begin
+
+	
+end architecture comportamento;

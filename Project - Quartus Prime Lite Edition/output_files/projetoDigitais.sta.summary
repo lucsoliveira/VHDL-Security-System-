@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'ClkSystem'
+Slack : -6.122
+TNS   : -86.481
+
+Type  : Slow 1200mV 85C Model Setup 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : -1.994
+TNS   : -9.494
+
+Type  : Slow 1200mV 85C Model Setup 'D[0]'
+Slack : -1.800
+TNS   : -7.241
+
+Type  : Slow 1200mV 85C Model Setup 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : -1.521
+TNS   : -6.947
+
+Type  : Slow 1200mV 85C Model Hold 'D[0]'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ClkSystem'
+Slack : 1.231
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : 1.818
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClkSystem'
+Slack : -3.000
+TNS   : -28.700
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'D[0]'
+Slack : -3.000
+TNS   : -10.710
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : -1.285
+TNS   : -8.995
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV 0C Model Setup 'ClkSystem'
+Slack : -5.584
+TNS   : -77.866
+
+Type  : Slow 1200mV 0C Model Setup 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : -1.777
+TNS   : -8.451
+
+Type  : Slow 1200mV 0C Model Setup 'D[0]'
+Slack : -1.548
+TNS   : -5.937
+
+Type  : Slow 1200mV 0C Model Setup 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : -1.295
+TNS   : -5.829
+
+Type  : Slow 1200mV 0C Model Hold 'D[0]'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ClkSystem'
+Slack : 1.112
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : 1.817
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClkSystem'
+Slack : -3.000
+TNS   : -28.700
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'D[0]'
+Slack : -3.000
+TNS   : -10.710
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : -1.285
+TNS   : -8.995
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Fast 1200mV 0C Model Setup 'ClkSystem'
+Slack : -2.452
+TNS   : -36.053
+
+Type  : Fast 1200mV 0C Model Setup 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : -1.217
+TNS   : -3.476
+
+Type  : Fast 1200mV 0C Model Setup 'D[0]'
+Slack : -0.344
+TNS   : -1.032
+
+Type  : Fast 1200mV 0C Model Setup 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : -0.231
+TNS   : -0.973
+
+Type  : Fast 1200mV 0C Model Hold 'D[0]'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : 0.189
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ClkSystem'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : 0.714
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClkSystem'
+Slack : -3.000
+TNS   : -24.234
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'D[0]'
+Slack : -3.000
+TNS   : -9.948
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Sistema:inst2|OneShot:inst5|QOut'
+Slack : -1.000
+TNS   : -7.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Sistema:inst2|OneShot:inst6|QOut'
+Slack : -1.000
+TNS   : -5.000
+
+------------------------------------------------------------

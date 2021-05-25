@@ -1,0 +1,251 @@
+|projetoDigitais
+Alarm <= Saida:inst5.Alarm
+Enter => Entrada:inst.Enter
+ClkSystem => Entrada:inst.ClkSystem
+D[9] => Entrada:inst.D[9]
+D[8] => Entrada:inst.D[8]
+D[7] => Entrada:inst.D[7]
+D[6] => Entrada:inst.D[6]
+D[5] => Entrada:inst.D[5]
+D[4] => Entrada:inst.D[4]
+D[3] => Entrada:inst.D[3]
+D[2] => Entrada:inst.D[2]
+D[1] => Entrada:inst.D[1]
+D[0] => Entrada:inst.D[0]
+
+
+|projetoDigitais|Saida:inst5
+Alarm <= EightBitShiftReg:inst.Q
+R_L => EightBitShiftReg:inst.R_L
+Clk => EightBitShiftReg:inst.Clk
+
+
+|projetoDigitais|Saida:inst5|EightBitShiftReg:inst
+R_L => D6.IN0
+R_L => D5.IN0
+R_L => D4.IN0
+R_L => D3.IN0
+R_L => D2.IN0
+R_L => D1.IN0
+R_L => D0.IN0
+R_L => D7.IN0
+R_L => D6.IN0
+R_L => D5.IN0
+R_L => D4.IN0
+R_L => D3.IN0
+R_L => D2.IN0
+R_L => D1.IN0
+R_L => D0.IN0
+Clk => DFF0.CLK
+Clk => DFF1.CLK
+Clk => DFF2.CLK
+Clk => DFF3.CLK
+Clk => DFF4.CLK
+Clk => DFF5.CLK
+Clk => DFF6.CLK
+Clk => DFF7.CLK
+D[0] => D0.IN1
+D[1] => D1.IN1
+D[2] => D2.IN1
+D[3] => D3.IN1
+D[4] => D4.IN1
+D[5] => D5.IN1
+D[6] => D6.IN1
+D[7] => D7.IN1
+Q <= DFF7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Saida:inst5|cons:inst2
+cons[0] <= <GND>
+cons[1] <= <GND>
+cons[2] <= <GND>
+cons[3] <= <GND>
+cons[4] <= <VCC>
+cons[5] <= <GND>
+cons[6] <= <GND>
+cons[7] <= <GND>
+
+
+|projetoDigitais|Sistema:inst2
+Igualdade <= ComparatorFourBit:inst2.EQ
+ORGate => OneShot:inst5.Enable
+ORGate => CodeSelection:inst3.Clk
+Clk => OneShot:inst5.Clk
+Clk => OneShot:inst6.Clk
+Q[0] => FourBitParSftReg:inst.D[0]
+Q[1] => FourBitParSftReg:inst.D[1]
+Q[2] => FourBitParSftReg:inst.D[2]
+Q[3] => FourBitParSftReg:inst.D[3]
+TimeB <= OneShot:inst6.QOut
+
+
+|projetoDigitais|Sistema:inst2|ComparatorFourBit:inst2
+A[3] => Equal0.IN3
+A[3] => Equal1.IN3
+A[2] => Equal0.IN2
+A[2] => Equal1.IN2
+A[1] => Equal0.IN1
+A[1] => Equal1.IN1
+A[0] => Equal0.IN0
+A[0] => Equal1.IN0
+B[3] => Equal0.IN7
+B[2] => Equal0.IN6
+B[1] => Equal0.IN5
+B[0] => Equal0.IN4
+EQ <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Sistema:inst2|FourBitParSftReg:inst
+D[0] => DFF3.DATAIN
+D[1] => DFF2.DATAIN
+D[2] => DFF1.DATAIN
+D[3] => DFF0.DATAIN
+Clk => DFF0.CLK
+Clk => DFF1.CLK
+Clk => DFF2.CLK
+Clk => DFF3.CLK
+Q[0] <= DFF3.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= DFF2.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= DFF1.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= DFF0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Sistema:inst2|OneShot:inst5
+Enable => process_0.IN1
+Enable => Flag.OUTPUTSELECT
+Clk => QOut~reg0.CLK
+Clk => Cnt[0].CLK
+Clk => Cnt[1].CLK
+Clk => Cnt[2].CLK
+Clk => Cnt[3].CLK
+Clk => Cnt[4].CLK
+Clk => Cnt[5].CLK
+Clk => Cnt[6].CLK
+Clk => Cnt[7].CLK
+Clk => Flag.CLK
+QOut <= QOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Sistema:inst2|FourBitParSftReg:inst4
+D[0] => DFF3.DATAIN
+D[1] => DFF2.DATAIN
+D[2] => DFF1.DATAIN
+D[3] => DFF0.DATAIN
+Clk => DFF0.CLK
+Clk => DFF1.CLK
+Clk => DFF2.CLK
+Clk => DFF3.CLK
+Q[0] <= DFF3.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= DFF2.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= DFF1.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= DFF0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Sistema:inst2|CodeSelection:inst3
+ShiftIn => process_0.IN1
+ShiftIn => process_0.IN1
+ShiftIn => process_0.IN1
+ShiftIn => Bout[0].OUTPUTSELECT
+ShiftIn => Bout[1].OUTPUTSELECT
+ShiftIn => Bout[2].OUTPUTSELECT
+ShiftIn => Bout[3].OUTPUTSELECT
+ShiftIn => flag[0].OUTPUTSELECT
+ShiftIn => flag[1].OUTPUTSELECT
+ShiftIn => flag[2].OUTPUTSELECT
+ShiftIn => process_0.IN1
+Clk => Bout[0]~reg0.CLK
+Clk => Bout[1]~reg0.CLK
+Clk => Bout[2]~reg0.CLK
+Clk => Bout[3]~reg0.CLK
+Clk => flag[0].CLK
+Clk => flag[1].CLK
+Clk => flag[2].CLK
+Bout[0] <= Bout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Bout[1] <= Bout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Bout[2] <= Bout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Bout[3] <= Bout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Sistema:inst2|OneShot:inst6
+Enable => process_0.IN1
+Enable => Flag.OUTPUTSELECT
+Clk => QOut~reg0.CLK
+Clk => Cnt[0].CLK
+Clk => Cnt[1].CLK
+Clk => Cnt[2].CLK
+Clk => Cnt[3].CLK
+Clk => Cnt[4].CLK
+Clk => Cnt[5].CLK
+Clk => Cnt[6].CLK
+Clk => Cnt[7].CLK
+Clk => Flag.CLK
+QOut <= QOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Entrada:inst
+ORgateOut <= OrGate:inst1.ORgateOut
+Enter => OrGate:inst1.Enter
+D[9] => OrGate:inst1.key[9]
+D[9] => BCDEncoder:inst.D[0]
+D[8] => OrGate:inst1.key[8]
+D[8] => BCDEncoder:inst.D[1]
+D[7] => OrGate:inst1.key[7]
+D[7] => BCDEncoder:inst.D[2]
+D[6] => OrGate:inst1.key[6]
+D[6] => BCDEncoder:inst.D[3]
+D[5] => OrGate:inst1.key[5]
+D[5] => BCDEncoder:inst.D[4]
+D[4] => OrGate:inst1.key[4]
+D[4] => BCDEncoder:inst.D[5]
+D[3] => OrGate:inst1.key[3]
+D[3] => BCDEncoder:inst.D[6]
+D[2] => OrGate:inst1.key[2]
+D[2] => BCDEncoder:inst.D[7]
+D[1] => OrGate:inst1.key[1]
+D[1] => BCDEncoder:inst.D[8]
+D[0] => OrGate:inst1.key[0]
+D[0] => BCDEncoder:inst.D[9]
+CLK1 <= ClkSystem.DB_MAX_OUTPUT_PORT_TYPE
+ClkSystem => CLK1.DATAIN
+Q[0] <= BCDEncoder:inst.Q[0]
+Q[1] <= BCDEncoder:inst.Q[1]
+Q[2] <= BCDEncoder:inst.Q[2]
+Q[3] <= BCDEncoder:inst.Q[3]
+
+
+|projetoDigitais|Entrada:inst|OrGate:inst1
+key[9] => ORgateOut.IN0
+key[8] => ORgateOut.IN1
+key[7] => ORgateOut.IN1
+key[6] => ORgateOut.IN1
+key[5] => ORgateOut.IN1
+key[4] => ORgateOut.IN1
+key[3] => ORgateOut.IN1
+key[2] => ORgateOut.IN1
+key[1] => ORgateOut.IN1
+key[0] => ORgateOut.IN1
+Enter => ORgateOut.IN1
+ORgateOut <= ORgateOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoDigitais|Entrada:inst|BCDEncoder:inst
+D[0] => ~NO_FANOUT~
+D[1] => Q.IN1
+D[2] => Q.IN1
+D[3] => Q.IN1
+D[3] => Q.IN1
+D[4] => Q.IN1
+D[5] => Q.IN1
+D[5] => Q.IN1
+D[6] => Q.IN0
+D[7] => Q.IN1
+D[7] => Q.IN0
+D[8] => Q.IN0
+D[9] => Q.IN1
+D[9] => Q.IN1
+Q[0] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+

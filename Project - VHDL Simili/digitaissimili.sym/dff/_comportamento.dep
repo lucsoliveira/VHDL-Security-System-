@@ -1,0 +1,5 @@
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.vardff(comportamento)digitaissimili.sym/dff/_comportamento.var
+.srcdff(comportamento)dff.vhdl
+.vardffdigitaissimili.sym/dff/prim.var

@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity CodeSelection is
+
+	port (Enable, Clk: in std_logic;
+		Duration: in integer range 0 to 25;
+		QOut: buffer std_logic);
+
+end entity CodeSelection;
+
+architecture comportamento of CodeSelection is
+
+begin
+
+end architecture comportamento;

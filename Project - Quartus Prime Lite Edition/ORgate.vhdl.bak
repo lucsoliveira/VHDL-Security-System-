@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity OrGate is
+
+	port (key: in std_logic_vector(0 to 9); ORgate: out std_logic);
+			
+end entity OrGate;
+
+architecture comportamento of OrGate is
+
+
+
+	signal ORgate: std_logic;
+
+begin
+
+	ORgate <= (Key(0) or Key(1) or Key(2) or Key(3) or Key(4) or key(5) or Key(6) or Key(7) or Key(8) or Key(9));
+
+
+end architecture comportamento;

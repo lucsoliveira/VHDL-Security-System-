@@ -1,0 +1,5 @@
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.varfourbitshiftreg(comportamento)digitaissimili.sym/fourbitshiftreg/_comportamento.var
+.srcfourbitshiftreg(comportamento)fourbitshiftreg.vhdl
+.varfourbitshiftregdigitaissimili.sym/fourbitshiftreg/prim.var
